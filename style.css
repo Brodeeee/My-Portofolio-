@@ -1,0 +1,131 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  background: url('beautiful architecture building.jpg') no-repeat center center fixed;
+  background-size: cover;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Overlay Dark */
+body.dark {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* Overlay for glass look */
+.overlay {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100%;
+  padding-bottom: 5rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffffff4d;
+}
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+nav a, #darkModeToggle {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.glass {
+  background: #ffffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px #ffffffff;
+  color: #000000;
+}
+
+.glass h2 span {
+  color: #423c3c;
+}
+
+/* Sections */
+section {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+.glass-section {
+  background: #42424263;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+/* Button */
+.btn {
+  background: #423c3c;
+  color: black;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #ccf9ff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: rgba(49, 49, 49, 0.6);
+}
+
+/* Animasi */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .glass {
+    padding: 1.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
